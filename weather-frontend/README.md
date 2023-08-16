@@ -1,27 +1,38 @@
-# WeatherApp
+# WeatherApp - Aplicação Web de Previsão do Tempo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
+Bem-vindo ao WeatherApp! Este é um projeto de aplicação web desenvolvido utilizando Java no backend e Angular no frontend para fornecer informações precisas sobre a previsão do tempo em diferentes cidades do mundo. Através da integração com a API da OpenWeatherAPI e o uso do Spring Boot, esta aplicação permite aos usuários obterem informações sobre a temperatura, umidade, temperaturas mínima e máxima, além de visualizarem a imagem correspondente à descrição do clima corrente na cidade escolhida.
 
-## Development server
+## Funcionalidades Principais
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Acesse o site e insira o nome de uma cidade para obter informações detalhadas sobre a previsão do tempo.
+- Receba dados precisos de temperatura, umidade, temperaturas mínima e máxima para a cidade selecionada.
+- Visualize uma imagem que representa a descrição do clima atual na localidade.
 
-## Code scaffolding
+## Tecnologias Utilizadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Backend**: Java com Spring Boot
+  - Utilização do Spring Boot para criação de uma API RESTful.
+  - Integração com a OpenWeatherAPI para obtenção dos dados de previsão do tempo.
+  - Endpoint `/api/weather/{city}` para receber o nome da cidade como parâmetro na requisição.
 
-## Build
+- **Frontend**: Angular
+  - Desenvolvimento de uma interface de usuário moderna e interativa.
+  - Interação com o backend através do endpoint de API.
+  - Apresentação dos dados da previsão do tempo de forma amigável.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Instruções de Uso
 
-## Running unit tests
+1. Certifique-se de ter o Java e o Node.js instalados em seu sistema.
+2. Clone este repositório para a sua máquina local.
+3. Navegue até a pasta `weather-frontend` e execute `npm install` para instalar as dependências do frontend.
+4. Inicie o frontend com o comando `ng serve`.
+5. Navegue até a pasta `WeatherApp` e execute o aplicativo Spring Boot. (Lembre-se de informar a chave da sua API da Open Weather API na classe controller)
+6. Acesse o site através do navegador e insira o nome de uma cidade para obter a previsão do tempo.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Contribuição
 
-## Running end-to-end tests
+Contribuições são bem-vindas! Se você deseja melhorar este projeto, fique à vontade para criar um fork do repositório e submeter um pull request com as suas modificações.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Contato
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Se você tiver alguma dúvida ou sugestão relacionada a este projeto, sinta-se à vontade para entrar em contato através das issues do repositório.
