@@ -1,0 +1,37 @@
+<header class="header">
+    <div class="middle-section">
+      <input class="search" type="text" placeholder="City Name" [(ngModel)]="cityName" (keyup.enter)="getWeather(cityName)">
+      <button class="search-btn" (click)="getWeather(cityName)">
+        <svg enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><path d="m20.87 20.17-5.59-5.59C16.35 13.35 17 11.75 17 10c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.75 0 3.35-.65 4.58-1.71l5.59 5.59.7-.71zM10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"></path></svg>
+      </button>
+    </div>
+</header>
+
+<div class="main-card" *ngIf="weatherData">
+  <div class="card-weather">
+    <div class="city-name">
+      <span>{{weatherData.cityName}}, {{weatherData.country}}</span>
+    </div>
+    <div class="weather-temp-container">
+      <p>{{weatherData.temp}}°C</p>
+    </div>
+    <div class="weather-icon-container">
+      <img src="https://openweathermap.org/img/wn/{{weatherData.weatherIcon}}@2x.png">
+      <p>{{weatherData.description}}</p>
+    </div>
+    <div class="temp-data">
+      <div class="temp-info-container">
+        <p>Temp. Mínima</p>
+        <p>{{weatherData.tempMin}}°C</p>
+      </div>
+      <div class="temp-info-container">
+        <p>Umidade</p>
+        <p>{{weatherData.humidity}}%</p>
+      </div>
+      <div class="temp-info-container">
+        <p>Temp. Máxima</p>
+        <p>{{weatherData.tempMax}}°C</p>
+      </div>
+    </div>
+  </div>
+</div>
